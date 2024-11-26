@@ -1,0 +1,157 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    font-family: 'Verdana', sans-serif;
+    color: #fff;
+}
+
+header {
+    background: linear-gradient(90deg, #FF6347, #FFD700);
+    color: white;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #FFD700;
+}
+
+header .menu-mobile {
+    display: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    padding: 4rem 2rem;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+section p {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #555;
+}
+
+/* Galeria */
+#galeria {
+    background-color: #fff;
+    padding: 4rem 2rem;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.galeria-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.galeria-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+footer .redes-sociais {
+    margin-bottom: 1rem;
+}
+
+footer .redes-sociais a {
+    text-decoration: none;
+    color: white;
+    margin: 0 1rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+footer .redes-sociais a:hover {
+    color: #FFD700;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header nav ul {
+        display: none;
+    }
+
+    header .menu-mobile {
+        display: block;
+    }
+
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+}
